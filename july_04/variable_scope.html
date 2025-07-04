@@ -1,0 +1,20 @@
+<script>
+    var a=10;
+    let b=20;
+    const c=30;
+    console.log(`a: ${a} b:${b}, c: ${c}`);
+
+    function f1(){
+        var d=50;//local var, only works in f1
+        console.log(`F1 starts`);
+        console.log(`a: ${a} b:${b}, c: ${c}, d:${d}, e: ${e}`);
+    }
+    function f2(){
+        e = 100;// global var
+        console.log(`F2 starts`);
+        console.log(`a: ${a} b:${b}, c: ${c}`);
+    }
+    //console.log(`${d}`);
+    f1();
+    f2();
+</script>

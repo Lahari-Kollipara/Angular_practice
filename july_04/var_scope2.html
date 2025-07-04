@@ -1,0 +1,77 @@
+<script>
+
+    function f1() {
+        if (true) {
+            var a = 10;
+            console.log(`Inside Block a: ${a}`);
+        }
+        console.log(`Inside function a: ${a}`);
+    }
+    f1();
+
+    if (true) {
+        var name = 'sanjay';
+        console.log(`Inside Block name: ${name}`);
+    }
+    console.log(`Global Fname: ${name}`);
+
+
+    function f2() {
+        if (true) {
+            if (true) {
+                var add = 'bangalore';
+                console.log(`inner Block add: ${add}`);
+            }
+            console.log(`outer Block add: ${add}`);
+        }
+        console.log(`function add: ${add}`);
+
+    }
+    f2();
+    function f3(){
+        var sub= 20;
+
+            if(true){
+                var add= 'addition';
+                console.log(`${add}`);
+                if(true){
+                    console.log(`${add}`);
+                }
+            }
+            console.log(`${add}`);
+            console.log(`${sub}`);
+
+       
+    }
+    f3();
+    function f4(){
+        let sum=345;
+        if(true){
+            let place=20;
+            console.log(`${place}`);
+            if(true){
+                console.log(`${place}`);
+            }
+            console.log(`${place}`);
+            console.log(`${sum}`);
+        }
+    }
+    f4();
+
+    function f5() {
+        if (true) {
+            if (true) {
+                let add1 = 'bang';
+                console.log(`inner Block add: ${add1}`);
+            }
+            console.log(`outer Block add: ${add1}`);
+        }
+        console.log(`function add: ${add1}`);
+
+    }
+
+    f5();
+    //console.log(`${add}`);
+    //console.log(`${sub}`);
+    
+</script>
