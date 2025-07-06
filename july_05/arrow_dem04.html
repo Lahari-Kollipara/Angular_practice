@@ -1,0 +1,30 @@
+<script>
+    class User{
+
+        firstname= 'Virat';
+        lastname='Kohli';
+
+    fullname1(){
+        console.log(this.firstname, this.lastname);
+        console.log(this);
+    }
+
+
+    fullname2=()=>{//this is user--> as the outerscope is class User
+        console.log(this.firstname, this.lastname);
+        console.log(this);
+    }
+}
+
+let userObj= new User();
+
+userObj.fullname1();
+userObj.fullname2();
+//reg function is not executing this, as it is called as a callback method
+setTimeout(userObj.fullname1, 2000);
+setTimeout(userObj.fullname2, 2000);
+
+let x=userObj.fullname1;
+x();
+
+</script>

@@ -1,0 +1,25 @@
+<script>
+    function add(a, b){
+        console.log(`Addition of ${a} and ${b} is ${a+b}`);
+    }
+    add(10,20);
+
+
+    //function expression
+    //sub(30,2);//no
+    var sub= function(a,b){
+        console.log(`Subtraction of ${a} and ${b} is ${a-b}`);
+    }
+    sub(30,10);
+
+    //Self-Invoked
+     (function(a,b){
+        console.log(`Multiplication of ${a} and ${b} is ${a*b}`);
+    })(30,10);
+
+    //Arrow function
+     var div= (a,b)=>{
+        console.log(`Division of ${a} and ${b} is ${a/b}`);
+    }
+    div(30,10);
+</script>

@@ -1,0 +1,16 @@
+<html>
+<body>
+    <button onclick="f1()"> Click here</button>
+    <script>
+        function f1(){
+            console.log(`I am f1`);
+        }
+
+        //self-invoked
+        (function(){
+            console.log(`I am a self-invoked function`);
+        })();
+
+    </script>
+</body>
+</html>

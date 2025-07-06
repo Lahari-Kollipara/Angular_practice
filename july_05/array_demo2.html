@@ -1,0 +1,12 @@
+<script>
+    function f1(){
+        console.log(this);
+    }
+    f1();
+
+    let f2=()=>{
+        console.log(this);//window context
+    }
+    f2();
+
+</script>

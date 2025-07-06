@@ -1,0 +1,21 @@
+<script>
+let user={
+    firstname: 'Virat',
+    lastname: 'Kohli',
+    fullname1: function(){
+        console.log(this.firstname, this.lastname);
+    },
+
+    fullname2:()=>{
+        console.log(this.firstname, this.lastname);
+    }
+}
+//this refers to how the function is called here--> virat kohli
+user.fullname1();//being called by user object and it is a reg function
+
+
+//this refers to where the function is declared, since it is an arrow
+//undefined--> follows the outer scope
+user.fullname2();
+
+</script>
