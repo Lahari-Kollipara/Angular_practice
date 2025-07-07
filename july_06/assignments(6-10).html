@@ -1,0 +1,54 @@
+<script>
+//6. WAP to print Account number
+
+    let num='12345678987';
+    let res = num.substring(0, 2) + num.substring(2, 9).replaceAll(/./g, '*') + num.substring(9);
+    console.log(res);
+
+
+//7. WAP to print Credit-card number
+
+    let input= '1111222233334444';
+    let str='';
+    for(let i=0;i<input.length;i+=4){
+        str+=input.substring(i, i+4);
+        if(i+4<input.length){
+            str+='-';
+        }
+    }
+    console.log(str);
+
+
+//8.  WAP to check if 2 strings are anagram or not
+let string1= 'listen';
+let string2='silence';
+if(string1.length!=string2.length){
+    console.log("not an anagram");
+}
+else{
+    let temp=string2;
+    let isAnagram=true;
+    for (char of string1) {
+        if (temp.includes(char)) {
+            let index = temp.indexOf(char);
+            temp = temp.slice(0, index) + temp.slice(index + 1);
+        } else {
+            isAnagram = false;
+            break;
+        }
+    }
+    console.log(isAnagram?'anagram':'not a anagram');
+}
+
+//9. WAP to remove special character from a string
+    let str_exp='hello@#hi&';
+    let result= str_exp.replace(/[^a-z0-9A-Z]/g, '');
+    console.log(result);
+    
+//10.WAP to move all the special characters to the end of the string
+let str2='hello@#hi&';
+let res1=str2.replace(/[a-zA-Z0-9]/g, '');
+let res2= str2.replace(/[^a-zA-Z0-9]/g, '');
+    console.log(res2.concat(res1));
+
+</script>

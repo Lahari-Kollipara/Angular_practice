@@ -1,0 +1,59 @@
+
+<script>
+
+    //1. WAP to reverse a string
+    let str="sachin";
+    let rev="";
+
+    for(i=str.length-1;i>=0;i--){
+        rev+=str[i];
+}
+console.log(rev);
+
+    //2. WAP to reverse words
+    let str1= "This is javascript class";
+    let splitarray=str1.split(" ");
+    let res="";
+    for(i=splitarray.length-1;i>=0;i--){
+        res+=splitarray[i]+" ";
+    }
+    console.log(res);
+   
+    //3.WAP to print the first non-repeated character in a string
+    let str3 = 'entertainment';
+    
+    for (char of str3) {
+        if (str3.indexOf(char) == str3.lastIndexOf(char)) {
+            console.log(char);
+            break;
+        }
+    }
+
+    //4.WAP to print a string in title case
+    let input= 'this is javascript class';
+    let splitarray1=input.split(" ");
+    let result='';
+
+    for(i=0;i<splitarray1.length;i++){
+
+        result+=splitarray1[i].charAt(0).toUpperCase()+splitarray1[i].slice(1)+" ";
+    
+    }
+    console.log(result);
+
+    //5. WAP to find longest word in a sentence
+    let input1= 'this is javascript class';
+    let splitarray2=input1.split(" ");
+    let temp=splitarray2[0].length;
+    let temp1=splitarray2[0];
+
+    for(let i=0;i<splitarray2.length;i++){
+        if(splitarray2[i].length>temp){
+            temp=splitarray2[i].length;
+            temp1=splitarray2[i];
+            
+        }
+    }
+    console.log(temp1);
+
+</script>

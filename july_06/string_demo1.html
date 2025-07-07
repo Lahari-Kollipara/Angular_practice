@@ -1,0 +1,25 @@
+<script>
+    let str='Hello';
+    console.log(str.length);//str length
+    
+    console.log(str.toUpperCase());
+    console.log(str.toLowerCase());
+
+    console.log(str.charAt(1));//doesn't work for -ve index
+    console.log(str.at(1));
+
+    
+    console.log(str.at(-1));//at works with both +ve and -ve indexes
+    //returns o as -1 indicates from last
+
+    console.log(str.charCodeAt(1));//e-->ASCII value(107)
+
+    console.log('sachin'.concat('tendulkar'));
+
+    console.log(indexOf('o'));//4
+    console.log(lastIndexOf('o'));//7-->returns the last index where we see 'o'
+
+    console.log(str.includes('Hell'));
+    console.log(str.includes('Hii'));
+
+</script>
