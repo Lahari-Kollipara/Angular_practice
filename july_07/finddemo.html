@@ -1,0 +1,34 @@
+<script>
+
+    let arr=[10,20,30];
+    let cars=['tata', 'honda', 'maruti'];
+    //array of objects
+    let employees=[
+        {"eId":101, "name":"sanjay", "sal":5000, "gender":"male"},
+        {"eId":102, "name":"geeta", "sal":5000, "gender":"female"},
+        {"eId":103, "name":"sanjay", "sal":5000, "gender":"male"},
+        {"eId":104, "name":"sita", "sal":5000, "gender":"female"},
+        {"eId":105, "name":"sanjay", "sal":5000, "gender":"male"}
+    ]
+    //find is a higher order function, stops with first result
+    let first_female_emp=employees.find((emp)=>emp.gender=='female');
+    console.log(first_female_emp);
+
+    //indexOf()--> doesn't work with objects, so use findIndex()
+    let first_female_emp_ind=employees.findIndex((emp)=>emp.gender=='female');
+    console.log(first_female_emp_ind);
+
+    let last_female_emp=employees.findLast((emp)=>emp.gender=='female');
+    console.log(last_female_emp);
+
+    let last_female_emp_ind=employees.findLastIndex((emp)=>emp.gender=='female');
+    console.log(last_female_emp_ind);
+    
+    //find-->gives only the first element, filter--> all the elements
+    let all_female_emp=employees.filter((emp)=>emp.gender=='female');
+    console.log(all_female_emp);
+
+
+
+
+</script>

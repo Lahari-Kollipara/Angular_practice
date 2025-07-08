@@ -1,0 +1,87 @@
+<script>
+   //6. Ask user to enter a sequence of parantheses and validate
+   let input6='([{()}])';
+   let isBalanced=true;
+   let n=input6.length;
+
+   for(i=0;i<(n/2);i++){
+
+    let left=input6.charAt(i);
+    let right=input6.charAt(n-1-i);
+    if(left=='('&& right!=')' || left=='['&& right!=']' || left=='{'&& right!='}')
+    {
+        isBalanced=false;
+        break;
+    }
+   }
+   console.log(isBalanced);
+
+   //7. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
+
+   function calculatePermutations(str, result = "") {
+    if (!str.length) {
+      console.log(result);
+    }
+    for (let i = 0; i < str.length; i++) {
+      let rem = str.slice(0, i) + str.slice(i + 1);
+      calculatePermutations(rem, result + str[i]);
+    }
+  }
+  calculatePermutations("ABC");
+
+
+//8.Ask user to enter a number and convert that to Roman value
+
+ function intToRoman(num) {
+  const map = new Map([
+    [1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'],
+    [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'],
+    [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']
+  ]);
+
+  let result = "";
+
+  for (let [value, symbol] of map) {
+    while (num >= value) {
+      result += symbol;
+      num -= value;
+    }
+  }
+
+  return result;
+}
+
+// Example:
+console.log(intToRoman(9));    // Output: IX
+console.log(intToRoman(12));   // Output: XII
+console.log(intToRoman(58));   // Output: LVIII
+
+//9. Ask user to enter a roman string and convert that to integer value
+function romanToInt(roman) {
+  const map = {
+    I: 1, V: 5, X: 10, L: 50,
+    C: 100, D: 500, M: 1000
+  };
+  let total = 0;
+
+  for (let i = 0; i < roman.length; i++) {
+    let current = map[roman[i]];
+    let next = map[roman[i + 1]];
+
+    if (next > current) {
+      total += (next - current);
+      i++; // skip next
+    } else {
+      total += current;
+    }
+  }
+
+  return total;
+}
+
+// Example usage:
+console.log(romanToInt("IX"));   // Output: 9
+console.log(romanToInt("XII"));  // Output: 12
+console.log(romanToInt("MCMXCIV")); // Output: 1994
+
+</script>

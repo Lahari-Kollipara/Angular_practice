@@ -1,0 +1,71 @@
+<script>
+
+    //1. Print the occurence of each character in a string
+    let input='entertainment';
+    let count={};
+
+    for(i in input){
+        let char=input.charAt(i);
+
+        if(count[char]){
+            count[char]+=1;
+        }
+        else{
+            count[char]=1;
+        }
+    }
+    console.log(count);
+
+    //2. Print the character which is repeated max no of times
+    let max=0;
+    let res='';
+    for(char in count){
+        if(count[char]>max){
+            max=count[char];
+            res=char;
+        }
+    }
+    console.log(res);
+
+    //3. Swap The case for Each Character in a string 
+    let input3='Hello World';
+    let output='';
+    for(char of input3){
+        if(char==char.toUpperCase()){
+            output+=char.toLowerCase();
+        }
+        else{
+            output+=char.toUpperCase();
+        }
+    }
+    console.log(output);
+
+    //4. Print the Abbreviation for a string
+
+    let input4= 'Rabindra Nath Tagore';
+    let output4=[];
+    let temp= input4.split(' ');
+    for(i=0;i<temp.length-1;i++){
+
+            output4.push((temp[i].charAt(0)).toUpperCase()+'.');
+    }
+    output4.push(' ', (temp[temp.length-1]).toLowerCase());
+    console.log(output4.join(''));
+
+    //5. Shift the characters by the next character
+    
+    let input5='abcxyz';
+    let output5='';
+    //output='bcdyza';
+    for(i in input5){
+        if(input5[i]=='z'){
+            output5+='a';
+        }
+        else{
+           output5+=String.fromCharCode((input5.charCodeAt(i))+1);
+        }
+    }
+    console.log(output5);
+
+
+</script>
