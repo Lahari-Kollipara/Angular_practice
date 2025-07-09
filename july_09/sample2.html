@@ -1,0 +1,23 @@
+<script>
+    const input = ["eat", "tea", "tan", "ate", "nat", "bat"];
+    function groupAnagrams(input){
+
+        let temp={};
+        for(i of input){
+            let sorted=(i.split('').sort().join(''));
+            if(!temp[sorted]){
+                temp[sorted]=[];
+            }
+            temp[sorted].push(i);
+        }
+        console.log(temp);
+    }
+    
+    
+    
+    
+    
+    
+    console.log(groupAnagrams(input));
+    // Output: [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+</script>

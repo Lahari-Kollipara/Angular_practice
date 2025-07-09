@@ -1,0 +1,19 @@
+<script>
+    let arr=[1,2,40,50];
+    let sum=0;
+    for(let num of arr){
+        sum+=num;
+    }
+    console.log(sum);
+
+//reduce
+    console.log(arr.reduce((prev,curr)=>{
+        return prev+curr;
+    }));
+
+    let str='sachin';
+    let revStr=str.split('').reduce((prev,curr)=>{
+        return curr+prev;
+    });
+    console.log(revStr);
+</script>

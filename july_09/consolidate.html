@@ -1,0 +1,26 @@
+<script>
+    let employees = [
+      { eId: 101, name: "sanjay", hours: 3 },
+      { eId: 102, name: "deepak", hours: 2 },
+      { eId: 103, name: "ajay", hours: 4 }, // monday
+      { eId: 102, name: "deepak", hours: 3 },
+      { eId: 103, name: "ajay", hours: 3 }, // tuesday
+      { eId: 101, name: "sanjay", hours: 2 },
+      { eId: 102, name: "deepak", hours: 4 }, //wednesday
+    ];
+    let temp={};
+    for(emp of employees){
+        if(!temp[emp.eId]){
+            temp[emp.eId]={
+                name:emp.name,
+                temp:0
+        };
+    }
+        temp[emp.eId].temp+=emp.hours;
+
+        //let res=employees.filter((emp)=> emp.eId==)
+
+    }
+    console.log(temp);
+
+</script>

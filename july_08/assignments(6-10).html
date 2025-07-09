@@ -1,0 +1,85 @@
+<script>
+
+    //6.convert array of letters to array of words
+
+		const inputArr = [ 
+				'b', 'a', 'k', 'e', '',
+				'c', 'a', 'k', 'e', '',
+				'e', 'a', 't'
+				];
+        let outputArr= inputArr.reduce((acc,char)=>{
+            if(char==''){
+                acc.push('');
+            }
+            else{
+                acc[acc.length-1]+=char;
+            }
+            return acc;
+        },['']);
+        console.log(outputArr);
+
+    //7. add Dept info for each employee
+
+    let employees = [{eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+				{ eId: 104, name: "reena", sal: 8000, gender: "female" }]
+	let departments = [{ eId: 101, dept: "sales" },
+				{ eId: 104, dept: "marketing" }]
+
+    for(i of employees){
+        for(j of departments){
+            if (i.eId==j.eId){
+                i.dept=j.dept;
+            }
+        }
+    }
+    console.log(employees);
+
+    //8. declare array of employees & groupBy employees-name
+
+    let employees8 = [
+    { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
+    { eId: 104, name: 'geeta', sal: 8000, gender: 'female' },
+    { eId: 103, name: 'sanjay', sal: 7000, gender: 'male' },
+    { eId: 102, name: 'sita', sal: 9000, gender: 'female' },
+	{ eId: 105, name: 'deepak', sal: 8000, gender: 'male' }
+  ];
+  let result8={};
+  for(emp of employees8){
+    if(!result8[emp.name]){
+        result8[emp.name]=[];
+    }
+    result8[emp.name].push(emp);
+  }
+  console.log(result8);
+
+    //9. intersection of 2 number arrays
+    let input9=[10,20,30];
+    let input9_1=[10,40,50];
+    for(i in input9){
+        let temp=input9[i];
+        for(j in input9_1){
+            if(temp==input9_1[j]){
+                console.log(temp);
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+    //10. WAP to print the occurance of each elements 
+    let input10 = [10,20,30,40,50,10,30,50];
+    let count={};
+    for(i in input10){
+        let init=input10[i];
+    if(count[init]){
+            count[init]+=1;
+        }
+        else{
+            count[init]=1;
+        }
+    }
+    console.log(count);
+    
+        
+</script>

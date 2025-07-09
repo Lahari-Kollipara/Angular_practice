@@ -1,0 +1,16 @@
+<script>
+
+    const arr5 = [1, 2, 3, 4, 5, 6, 7];
+    const k = 3;
+
+    let temp=[];
+    function rotateArray(arr5,k){
+        for(i=arr5.length-1;i>=k;i--){
+            arr5.push(arr5.shift(arr5[i]));
+        }
+        return arr5;
+    }
+
+
+    console.log(rotateArray(arr5, k)); // Output: [5, 6, 7, 1, 2, 3, 4]
+</script>
