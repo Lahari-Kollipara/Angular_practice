@@ -1,0 +1,35 @@
+<script>
+    class Person{
+        constructor(name, age, add){
+            this.name=name;
+            this.age=age;
+            this.add=add;
+        }
+    }
+
+
+    class Employee extends Person{
+        constructor(name, age, add, eid, sal){
+            super(name, age, add);
+            this.eid=eid;
+            this.sal=sal;
+        
+        }
+    }
+
+let emp1=new Employee(101,'lahari','add',24,5000);
+console.log(emp1);
+
+class Student extends Person{
+        constructor(name, age, add, roll, course){
+            super(name, age, add);
+            this.roll=roll;
+            this.course=course;
+        
+        }
+    }
+
+let stu1=new Student(102,'lahari1','sub',24,'math');
+console.log(stu1);
+
+</script>

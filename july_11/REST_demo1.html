@@ -1,0 +1,36 @@
+<script>
+
+    function add2Num(a,b){
+        console.log(a+b);
+    }
+
+    add2Num(10,20);
+
+ function add3Num(a,b,c){
+        console.log(a+b+c);
+    }
+
+    add3Num(10,20,30);
+    
+
+    function sum(...arr){
+        let res=0;
+        for (ele of arr){
+            res+=ele;
+        }
+        console.log(res)
+    }
+
+    sum(10,20);
+    sum(10,20,30);
+    sum(10,20,30,40);
+
+function test(a,b, ...c){
+    console.log(a,b,c);
+}
+
+test(10,20,30,40,50);//a=10, b=20,c=[30,40,50]
+
+
+
+</script>
