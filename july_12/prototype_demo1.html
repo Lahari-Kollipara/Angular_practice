@@ -1,0 +1,27 @@
+<script>
+    class Student{
+        constructor(roll, name, course){
+            this.roll=roll;
+            this.name=name;
+            this.course=course;
+            //this.clg_name='Eureka';// with this u r assigning clg_name to all the objects
+        }
+    }
+        Student.prototype.clg_name='Eureka';
+        let stud1=new Student(101, 'lahari', 'javascript');
+        console.log(stud1);
+
+        let stud2=new Student(102, 'Yukthi', 'Angular', 'Eureka1');
+        stud2.clg_name='Eureka_infotech';
+        
+        console.log(stud2);
+
+        console.log('name' in stud1);
+        console.log(stud1.hasOwnProperty('name'));
+
+        console.log('clg_name' in stud1);
+        console.log(stud1.hasOwnProperty('clg_name'));
+
+
+
+</script>

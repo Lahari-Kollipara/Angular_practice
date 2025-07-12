@@ -1,0 +1,10 @@
+<script>
+    let obj1={a:10, b:20};
+    let obj2={c:30, b:40};
+    let obj3=Object.assign({}, obj1, obj2);
+    console.log(obj3);
+
+    let obj4=Object.create(obj3);
+    console.log(obj4);
+    console.log(obj4.a, obj4.b, obj4.c);
+</script>
