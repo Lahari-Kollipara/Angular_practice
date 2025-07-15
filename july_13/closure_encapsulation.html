@@ -1,0 +1,35 @@
+<script>
+    let account={accNo: 12345, accBal: 5000};
+    console.log(account.accNo, account.accBal);
+    account.accBal=-200;
+    console.log(account.accBal);
+
+    function openAccount(initAmount){
+        let accNo=112233;
+        let accBal=initAmount;//NOT EXPOSING THE DATA
+
+        return {//to expose the member functions
+
+            deposit: function(amt){
+                if(amt<0){
+                    console.log('Sorry bro');
+                }
+                else{
+                accBal+=amt;
+                }
+            },
+            displayInfo: function(){
+                console.log(`${accNo} has Rs.${accBal} in his account`);
+            }
+        }
+    }
+    let arunAccount=openAccount(30000);
+    console.log(arunAccount);
+
+    arunAccount.displayInfo();
+    arunAccount.deposit(200);
+     arunAccount.displayInfo();
+
+     console.dir(arunAccount.deposit);
+    
+</script>
